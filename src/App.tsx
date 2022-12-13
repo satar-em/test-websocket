@@ -139,7 +139,6 @@ function readerInJson(key: any, value: any) {
     else if (key === "socketLog") return undefined;
     else if (key === "socketMessage") return undefined;
     else return value;
-
 }
 
 function socketLogString(array: string[]): string {
