@@ -1,6 +1,5 @@
 import * as React from "react";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import * as Material from "@mui/material";
 
 export default function App(props: any) {
     const [state, setState] = React.useState<EmamiState>({
@@ -60,7 +59,7 @@ export default function App(props: any) {
                 </div>
                 <div className="row">
                     <div className="col-10">
-                        <TextField
+                        <Material.TextField
                             value={state.serverUrl}
                             fullWidth
                             disabled={state.connectionStatus}
@@ -71,14 +70,14 @@ export default function App(props: any) {
                         />
                     </div>
                     <div className="col-2 position-relative">
-                        <Button
+                        <Material.Button
                             onClick={handleClickBtnConDis}
                             className="position-absolute top-50 start-50 translate-middle"
                             fullWidth
                             variant="contained"
                         >
                             {state.connectionStatus ? "Disconnect" : "Connect"}
-                        </Button>
+                        </Material.Button>
                     </div>
                 </div>
                 <div className="row p-3">
@@ -88,7 +87,7 @@ export default function App(props: any) {
                 </div>
                 <div className="row p-1">
                     <div className="col-10">
-                        <TextField
+                        <Material.TextField
                             label="send Object"
                             fullWidth
                             value={state.socketMessage}
@@ -97,7 +96,7 @@ export default function App(props: any) {
                         />
                     </div>
                     <div className="col-2 position-relative">
-                        <Button
+                        <Material.Button
                             onClick={handleClickBtnSend}
                             className="position-absolute top-50 start-50 translate-middle"
                             fullWidth
@@ -105,12 +104,12 @@ export default function App(props: any) {
                             variant="contained"
                         >
                             Send
-                        </Button>
+                        </Material.Button>
                     </div>
                 </div>
                 <div className="row p-1">
                     <div className="col">
-                        <TextField
+                        <Material.TextField
                             label="log"
                             multiline
                             fullWidth
