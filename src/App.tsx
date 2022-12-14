@@ -53,7 +53,7 @@ export default function App(props: any) {
     };
     return (
         <>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row p-3">
                     <div className=" col text-center">WebSoket Teast</div>
                 </div>
